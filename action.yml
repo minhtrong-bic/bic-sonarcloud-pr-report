@@ -1,0 +1,15 @@
+name: 'Automation create a comment to PR to show Sonarcloud report'
+description: ''
+inputs:
+  GITHUB_TOKEN:
+    description: 'Your Github token. It always be secrets.GITHUB_TOKEN'
+    required: true
+  SONAR_TOKEN:  # id of input
+    description: 'Your Sonarcloud account token'
+    required: true
+  projectKey:  # id of input
+    description: 'Your Sonarcloud project key'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
